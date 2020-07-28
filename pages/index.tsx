@@ -1,10 +1,10 @@
-import Input from './Input';
+import Form from '../components/Form';
 
 const index = () => {
 	return (
-		<div>
-			<Input />
-		</div>
+		<section>
+			<Form />
+		</section>
 	);
 };
 
