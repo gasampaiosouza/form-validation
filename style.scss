@@ -1,6 +1,120 @@
 * {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+
+	font-family: 'Inter', 'Roboto', sans-serif;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+$main-color: #83c5be;
+$transition-duration: 0.4s;
+
+input {
+	$input-font: 17px;
+
+	font-size: $input-font;
+	position: relative;
+	color: #333;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 2.5px;
+}
+
+.input {
+	float: left;
+	width: 300px;
+	min-width: 240px;
+	margin: 40px 3%;
+	position: relative;
+
+	&-box {
+		border: 1px solid #ccc;
+		padding: 7px 14px;
+		transition: 0.4s;
+		background: transparent;
+
+		& ~ .focus-border {
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background-color: $main-color;
+				transition: 0.3s;
+			}
+
+			&:after {
+				top: auto;
+				left: auto;
+				bottom: 0;
+				right: 0;
+			}
+
+			i:before,
+			i:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 2px;
+				height: 0;
+				background-color: $main-color;
+				transition: 0.4s;
+			}
+
+			i:after {
+				left: auto;
+				top: auto;
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+		&:focus ~ .focus-border:before,
+		&:focus ~ .focus-border:after,
+		&.has-content ~ .focus-border:before,
+		&.has-content ~ .focus-border:after {
+			width: 100%;
+			transition: 0.3s;
+		}
+
+		&:focus ~ .focus-border i:before,
+		&:focus ~ .focus-border i:after,
+		&.has-content ~ .focus-border i:before,
+		&.has-content ~ .focus-border i:after {
+			height: 100%;
+			transition: 0.4s;
+		}
+
+		& ~ label {
+			position: absolute;
+			left: 15px;
+			width: 100%;
+			top: 50%;
+			transform: translate(0, -50%);
+			color: #aaa;
+			transition: 0.3s;
+			z-index: -1;
+			letter-spacing: 0.5px;
+		}
+
+		&:focus ~ label,
+		&.has-content ~ label {
+			$label-distance: -12px;
+
+			top: $label-distance;
+			left: 0;
+			font-size: 12px;
+			color: $main-color;
+			transition: 0.3s;
+		}
+	}
 }

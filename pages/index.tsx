@@ -1,7 +1,9 @@
+import Input from './Input';
+
 const index = () => {
 	return (
 		<div>
-			<h1>My new next app!</h1>
+			<Input />
 		</div>
 	);
 };
