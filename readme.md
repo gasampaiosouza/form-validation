@@ -1,6 +1,8 @@
-# Next SCSS Template
+# Form Validation
 
-## ⚙️ Installation
+Working on it...
+
+<!-- ## ⚙️ Installation
 
 - First, you need to clone this repository: <br />
   `git clone https://github.com/gasampaiosouza/next-sass-template` <br /><br />
@@ -24,4 +26,4 @@
 
 ## 😃 Thank you
 
-That's my project, i hope you liked it, there's a bunch more coming! 💜
+That's my project, i hope you liked it, there's a bunch more coming! 💜 -->
