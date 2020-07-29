@@ -1,16 +1,15 @@
 # Form Validation
 
-I made a simple form-validation, to practice some regex.
+I made a simple form-validation, to practice regex.
 
 ![first page view](https://imgur.com/sOUjSwJ.png)
-
-> once you follow the rule, it changes it's color.
+> once you follow the rule, it changes the rule's color.
 
 ## ⚙️ Usage
 
 To see it live is pretty simple.
 
-- First, you need to clone this repository go into the created folder, and install it's dependencies:
+- First, you need to clone this repository, go into the created folder and install it's dependencies:
 ```
 git clone https://github.com/gasampaiosouza/form-validation.git
 cd form-validation
