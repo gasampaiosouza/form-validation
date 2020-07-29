@@ -1,29 +1,15 @@
 # Form Validation
 
-Working on it...
+I made a simple form-validation, to practice some regex.
 
-<!-- ## ⚙️ Installation
+![first page view](https://imgur.com/sOUjSwJ.png)
 
-- First, you need to clone this repository: <br />
-  `git clone https://github.com/gasampaiosouza/next-sass-template` <br /><br />
-  or you can use [hub](https://hub.github.com/) with: <br />
-  `hub clone gasampaiosouza/next-sass-template`
+> once you follow the rule, it changes it's color.
 
-  <br />
+## ⚙️ Usage
 
-- Then, go into the folder you've created and open it <br />
-  `cd next-sass-template && code .`
-  > **code dot** is for VSCode
-
-<br />
-
-- Inside the folder, and your favorite code editor, run: <br />
-  `npm install` or `yarn add` to install it's dependecies.
-
-  > the project is setted up with yarn
-
-  finally, `npm run dev` or `yarn dev`. Then, just open [http://localhost:3000/](http://localhost:3000/) in the browser.
+You can see it online, [**right here**](https://google.com).
 
 ## 😃 Thank you
 
-That's my project, i hope you liked it, there's a bunch more coming! 💜 -->
+That's my project, i hope you liked it, there's a bunch more coming! 💜
