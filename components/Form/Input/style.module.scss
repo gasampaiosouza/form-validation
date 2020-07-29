@@ -2,17 +2,23 @@
 
 $transition-duration: 0.4s;
 
-.input {
-	float: left;
-	width: 300px;
-	min-width: 240px;
+.container {
 	position: relative;
+	width: 100%;
+}
+
+.input {
+	position: relative;
+	width: 100%;
+	margin-bottom: 35px;
+	min-width: 240px;
 
 	&-box {
 		border: 1px solid rgba(#ccc, 0.5);
 		padding: 7px 14px;
 		transition: 0.4s;
 		background: #fafafa;
+		font-size: 1em;
 
 		&:focus,
 		&:valid {
@@ -85,7 +91,6 @@ $transition-duration: 0.4s;
 			transition: 0.3s;
 
 			pointer-events: none;
-			letter-spacing: 0.5px;
 		}
 
 		&:focus ~ label,
@@ -94,9 +99,19 @@ $transition-duration: 0.4s;
 
 			top: $label-distance;
 			left: 0;
-			font-size: 12px;
+			font-size: -$label-distance;
 			color: $main-color;
 			transition: 0.3s;
 		}
 	}
+}
+
+.rule {
+	$font-size: 0.8em;
+
+	position: absolute;
+	opacity: 0.5;
+	top: -$font-size - 0.75em;
+	right: 0;
+	font-size: $font-size;
 }
