@@ -1,11 +1,7 @@
 import Form from '../components/Form';
 
 const index = () => {
-	return (
-		<section>
-			<Form />
-		</section>
-	);
+	return <Form />;
 };
 
 export default index;
