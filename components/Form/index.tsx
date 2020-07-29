@@ -1,4 +1,4 @@
-import React, { useState, useRef, MutableRefObject } from 'react';
+import React, { useRef, MutableRefObject } from 'react';
 import Input from './Input';
 
 import style from './style.module.scss';
@@ -8,41 +8,41 @@ const Form: React.FC = () => {
 	const lowercaseRef = useRef(null);
 	const symbolsRef = useRef(null);
 
-	const [rules, setRules] = useState({
-		lowercase: { min: 2, completed: false },
-		uppercase: { min: 1, completed: false },
-		symbols: { min: 1, completed: false },
-	});
+	const rules = {
+		lowercase: { min: 2 },
+		uppercase: { min: 1 },
+		symbols: { min: 1 },
+	};
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = event.target.value;
-
-		const correctColor = '#96bb7c';
+		const correctColor = '#99b898';
 
 		const changeColor = (element: MutableRefObject<any>, color: string) =>
 			(element.current.style.color = color);
 
-		const regexes = () => {
+		const getRegexes = () => {
 			const { lowercase: lower, symbols, uppercase: upper } = rules;
 
 			const symbolRegex = new RegExp(
-				`[-!$%@\^&*()_+|~{}\[\\]:";'<>?,.\/]{${symbols.min}}`,
+				`[-!$%@#\^&*()_+|~{}\[\\]:";'<>?,.\/]{${symbols.min}}`,
 				'g'
 			);
-			const upperRegex = new RegExp(`[A-Z]{${upper.min}}`, 'g');
-			const lowerRegex = new RegExp(`[a-z]{${lower.min}}`, 'g');
+			const upperRegex = /[A-Z]/g;
+			const lowerRegex = /[a-z]/g;
 
 			return [
-				{ regex: lowerRegex, label: lowercaseRef },
-				{ regex: upperRegex, label: uppercaseRef },
-				{ regex: symbolRegex, label: symbolsRef },
+				{ regex: lowerRegex, label: lowercaseRef, min: 2 },
+				{ regex: upperRegex, label: uppercaseRef, min: 1 },
+				{ regex: symbolRegex, label: symbolsRef, min: 1 },
 			];
 		};
 
-		regexes().forEach(({ regex, label }) => {
+		getRegexes().forEach(({ regex, label, min }) => {
 			const regexMatches = [...value.matchAll(regex)].length != 0;
+			const isMinimumRequired = [...value.matchAll(regex)].length >= min;
 
-			if (regexMatches) changeColor(label, correctColor);
+			if (regexMatches && isMinimumRequired) changeColor(label, correctColor);
 			else changeColor(label, 'initial');
 		});
 	};
