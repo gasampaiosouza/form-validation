@@ -8,7 +8,16 @@ I made a simple form-validation, to practice some regex.
 
 ## ⚙️ Usage
 
-You can see it online, [**right here**](https://google.com).
+To see it live is pretty simple.
+
+- First, you need to clone this repository go into the created folder, and install it's dependencies:
+```
+git clone https://github.com/gasampaiosouza/form-validation.git
+cd form-validation
+npm install
+```
+
+- Then, to run [NextJS](https://nextjs.org/learn/basics/create-nextjs-app/setup) you type `npm run dev` or `yarn dev`.
 
 ## 😃 Thank you
 
